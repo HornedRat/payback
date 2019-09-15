@@ -1,0 +1,12 @@
+name: payback
+title: payback
+username:
+account: hornedrat
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1196464
+bundleId: 2415474
+url: https://hornedrat.shinyapps.io/payback/
+when: 1568573402.4329
+asMultiple: FALSE
+asStatic: FALSE

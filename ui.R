@@ -23,7 +23,7 @@ shinyUI(fluidPage(
                       width = '100%')
         ),
         column(2,
-               actionButton('goButton', "EVALUATE"))
+               actionButton('goButton', "ROZLICZ"))
     ),
     fluidRow(column(12,
                     "Kliknij",
