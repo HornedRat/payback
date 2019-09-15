@@ -18,19 +18,18 @@ shinyServer(function(input, output) {
         pointer <- gs_key(input$gs_id)
         data <- gs_read(pointer)
         
-        #spends
         spends <- data %>%
             group_by(Paid_by) %>%
             summarise(spend = sum(Amount)) %>%
             rename(user = Paid_by)
         
         #debts
-        debts <- data %>% 
-            mutate(all = rowSums(.[4:ncol(data)])) %>%
+        debts <- data %>%
+            mutate(all = rowSums(.[4:ncol(data)], na.rm = T)) %>%
             gather(key = "user", value = "part", -Name, -Amount, -Paid_by, -all) %>%
             mutate(debt = (part / all) * Amount) %>%
             group_by(user) %>%
-            summarise(debt = sum(debt))
+            summarise(debt = sum(debt, na.rm = T))
         
         #join
         balance <- spends %>%
