@@ -28,7 +28,8 @@ shinyUI(fluidPage(
     fluidRow(column(12,
                     "Kliknij",
                     a("tutaj", href = "https://docs.google.com/spreadsheets/d/17Jsk2Pofc0ECHBekPc2cVSNEUNLToPm80E6QzdyjJSk/"),
-                    "aby skopiować template arkusza do rozliczeń. Wrzuć go do Arkuszy Google, edytuj, a następnie wklej ID")),
+                    "aby skopiować template arkusza do rozliczeń. Wrzuć go do Arkuszy Google, edytuj, a następnie udostępnij go użytkownikowi
+                    paybackshinyapp@gmail.com. Wklei powyżej ID tego arkusza.")),
     fluidRow(
         column(12,
                htmlOutput("text")

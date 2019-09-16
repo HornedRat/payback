@@ -5,7 +5,7 @@ library(tidyr)
 library(shiny)
 
 httr::set_config(httr::config(http_version = 0))
-gs_auth()
+gs_auth(token = "googlesheets_token.rds")
 
     
 shinyServer(function(input, output) {
